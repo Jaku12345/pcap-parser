@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PCAP Raw Data Viewer</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dygraph/2.2.1/dygraph.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/2.2.1/dygraph.min.js"></script>
+  </head>
+  <body>
+    <p>Pcap analysis tool.</p>
+    <div class="victim-section">
+      <h3>Victim network traffic scatter-density plot</h3>
+      <input type="file" id="victimFileInput" accept=".pcap" />
+      <div id="globalVictimHeaderContainer"></div>
+      <div id="victimPacketChart"></div>
+      <div id="victimChartTooltip"></div>
+    </div>
+    <div class="attacker-section">
+      <h3>Attacker network traffic scatter-density plot</h3>
+      <input type="file" id="attackerFileInput" accept=".pcap" />
+      <div id="globalAttackerHeaderContainer"></div>
+      <div id="attackerPacketChart"></div>
+      <div id="attackerChartTooltip"></div>
+    </div>
+    <div class="correlation-section">
+      <h3>Victim and attacker correlation plot</h3>
+      <div id="correlationChart"></div>
+    </div>
+
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
